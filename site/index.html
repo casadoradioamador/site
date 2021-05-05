@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://www.casadoradioamador.org.br/imagens/logo.ico" />
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>CRRP</title>
+    <script type="text/javascript">
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            h = checkTime(h);
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML = `${h}:${m}:${s}`;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
+    </script>
+</head>
+
+<body onload="startTime()">
+    <header>
+        <div class="divtitulo">
+            <div class="titulo">
+                <h1>Casa do Radioamador</h1>
+                <h1>de</h1>
+                <h1>Ribeirão Preto</h1>
+                <h1>Em desenvolvimento...</h1>
+                <h2 class="clock" id="clock"></h2>
+                <div class="contato">
+                    <h1> contato@casadoradioamador.org.br </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+
+    </main>
+    <footer>
+        <p class="copyright">&copy; CRRP-Casa do Radioamador de Ribeirão Preto-SP&copy;2021</p>
+    </footer>
+    </div>
+
+
+</body>
+
+
+</html>
